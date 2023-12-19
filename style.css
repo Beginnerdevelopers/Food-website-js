@@ -1,0 +1,398 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header {
+  position: relative;
+  width: 58%;
+  height: 75%;
+  /* border: 1px solid #fff; */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 10px 25px -1px #000;
+  padding: 0px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: 0.2s linear;
+}
+header .logo {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 200px;
+  height: 300px;
+  transition: 1s linear;
+  background: #282828;
+}
+header .logo h3 {
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 25px;
+  font-weight: 600;
+}
+header .logo img {
+  width: 250px;
+  margin: 30px 0px 0px -30px;
+  filter: drop-shadow(0px 0px 20px rgb(0, 0, 0, 0.7));
+}
+header nav {
+  width: 100%;
+  height: 10%;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav .manu {
+  font-style: 25px;
+  color: black;
+}
+.left_menu {
+  width: 20px;
+  height: 90%;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.left_menu a {
+  margin: 30px 0px;
+  padding: 0px 8px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+  transition: 0.3s linear;
+  transform: rotate(-90deg);
+}
+.left_menu a:hover {
+  color: red;
+}
+.right_manu {
+  display: flex;
+  align-items: center;
+}
+.right_manu ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.right_manu ul li {
+  padding: 3px 13px;
+  font-weight: bold;
+}
+.right_manu ul li a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: black;
+  transition: 0.3s linear;
+  position: relative;
+}
+.right_manu ul li a::before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 4px;
+  background: red;
+  border-radius: 50%;
+  bottom: -5px;
+  left: 45%;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+.right_manu ul li a:hover {
+  color: red;
+}
+.right_manu ul li a:hover::before {
+  opacity: 1;
+}
+header section {
+  width: 95%;
+  height: 90%;
+  /* border: 1px solid rgb(240, 8, 8); */
+}
+.user_card {
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+}
+.user_card .user {
+  position: relative;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+.user_card .user img {
+  width: 100%;
+}
+.user_card .user::before {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  background: red;
+  z-index: 9999;
+}
+.content {
+  position: relative;
+  left: 370px;
+  margin-top: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  transition: 0.3s linear;
+}
+.content h1 {
+  font-size: 40px;
+  transition: 0.3s linear;
+}
+.content p {
+  font-size: 16px;
+  font-weight: 600;
+  width: 290px;
+  word-break: break-all;
+}
+.price_order {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.price h2 {
+  font-size: 20px;
+  color: red;
+  line-height: 15px;
+}
+.price p {
+  font-size: 5.5px;
+  width: 50px;
+  /* border: 1px solid black; */
+}
+.price_order a {
+  padding: 4px 20px;
+  background: #121213;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  margin-left: 35px;
+  border-radius: 10px;
+}
+.price_order a:hover {
+  color: #aea7a7;
+}
+.cards {
+  width: 90%;
+  height: 140px;
+  /* border: 1px solid black; */
+  position: relative;
+  top: 27%;
+  padding-left: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: auto;
+  scroll-behavior: smooth;
+  transition: 0.2s linear;
+}
+.cards::-webkit-scrollbar {
+  display: none;
+}
+.card {
+  position: relative;
+  min-width: 125px;
+  min-height: 125px;
+  /* border: 1px solid red; */
+  margin-right: 13px;
+  background: #282828;
+  border-radius: 50px 10px 10px 10px;
+}
+
+.card:nth-last-child(1) {
+  margin-right: 0px;
+}
+.cards .card .dis {
+  width: 70px;
+  position: relative;
+  top: -5px;
+  left: -5px;
+}
+
+.steam {
+  width: 60px;
+  height: 80px;
+  position: absolute;
+  top: -30px;
+  left: -5px;
+}
+.card h4 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+.card h5 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0px 10px;
+  margin-top: -8px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.card p {
+  color: rgb(203, 203, 203);
+  font-size: 19px;
+  font-weight: 600;
+  padding: 0px 10px;
+}
+.rate_cart {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 10px;
+  color: #fff;
+}
+.rate_cart h6 {
+  font-size: 15px;
+}
+.social {
+  position: relative;
+  width: 100%;
+  /* border: 1px solid rgb(255, 11, 11); */
+  top: 27.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.2s linear;
+}
+.btns {
+  margin-left: 30px;
+}
+.btns fa {
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+.btns fa:hover {
+  color: black;
+}
+.icons {
+  display: flex;
+  align-items: center;
+}
+.icons a {
+  font-size: 15px;
+  margin-left: 10px;
+  color: #282828;
+  transition: 0.3s line ar;
+}
+.icons a:hover {
+  color: black;
+}
+/* ============================================================  */
+@media screen and (max-width: 1260px) {
+  header {
+    width: 81%;
+  }
+}
+@media screen and (max-width: 885px) {
+  header {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 775px) {
+  .logo {
+    left: 13%;
+  }
+  .content {
+    left: 340px;
+  }
+  header section {
+    width: 92%;
+  }
+}
+@media screen and (max-width: 730px) {
+  header {
+    width: 100%;
+    height: 100%;
+  }
+  header nav .right_manu ul li {
+    padding: 3px 6px;
+  }
+}
+@media screen and (max-width: 600px) {
+  header nav .right_manu ul {
+    position: absolute;
+    top: 20%;
+    flex-direction: column;
+    width: 36px;
+    right: 17px;
+  }
+  header nav .right_manu ul li {
+    padding: 30px 10px;
+    transform: rotate(90deg);
+  }
+  .content {
+    left: 24%;
+    top: 38%;
+  }
+  .logo {
+    left: 30%;
+  }
+  .cards {
+    top: 43%;
+  }
+  .social {
+    top: 45%;
+    position: relative;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .logo {
+    left: 20%;
+  }
+  .content {
+    left: 12%;
+    top: 38%;
+  }
+}
+@media screen and (max-width: 418px) {
+  .content h1 {
+    font-size: 32px;
+  }
+  .content p {
+    font-size: 9px;
+    width: 270px;
+  }
+  header .logo {
+    width: 200px;
+  }
+  .logo img {
+    width: 245px;
+    margin: 75px 0px 0px -30px;
+  }
+}
